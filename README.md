@@ -43,7 +43,7 @@ dispatch-claude-code.sh \
   -n "my-scraper" \
   -g "-5189558203" \
   --permission-mode "bypassPermissions" \
-  --workdir "/home/ubuntu/projects/scraper"
+  --workdir "~/projects/scraper"
 ```
 
 ### Agent Teams 任务
@@ -55,7 +55,7 @@ dispatch-claude-code.sh \
   --agent-teams \
   --teammate-mode auto \
   --permission-mode "bypassPermissions" \
-  --workdir "/home/ubuntu/projects/myapp"
+  --workdir "~/projects/myapp"
 ```
 
 ### 参数
@@ -91,7 +91,7 @@ Hook 在 Stop 和 SessionEnd 都会触发。脚本使用 `.hook-lock` 文件去�
 
 ## 结果文件
 
-任务完成后，结果写入 `/home/ubuntu/clawd/data/claude-code-results/latest.json`：
+任务完成后，结果写入 `~/clawd/data/claude-code-results/latest.json`：
 ```json
 {
   "session_id": "...",

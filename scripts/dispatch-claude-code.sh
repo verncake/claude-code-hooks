@@ -26,18 +26,18 @@
 set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
-RESULT_DIR="/home/ubuntu/clawd/data/claude-code-results"
+RESULT_DIR="~/clawd/data/claude-code-results"
 META_FILE="${RESULT_DIR}/task-meta.json"
 OUTPUT_FILE="/tmp/claude-code-output.txt"
 TASK_OUTPUT="${RESULT_DIR}/task-output.txt"
-RUNNER="/home/ubuntu/clawd/skills/claude-code-clawdbot/scripts/claude_code_run.py"
+RUNNER="~/clawd/skills/claude-code-clawdbot/scripts/claude_code_run.py"
 
 # Defaults
 PROMPT=""
 TASK_NAME="adhoc-$(date +%s)"
 TELEGRAM_GROUP=""
 CALLBACK_SESSION=""
-WORKDIR="/home/ubuntu/clawd"
+WORKDIR="~/clawd"
 AGENT_TEAMS=""
 TEAMMATE_MODE=""
 PERMISSION_MODE=""

@@ -5,10 +5,10 @@
 
 set -uo pipefail
 
-LOG="/home/ubuntu/clawd/data/claude-code-results/hook.log"
-RESULT_DIR="/home/ubuntu/clawd/data/claude-code-results"
+LOG="~/clawd/data/claude-code-results/hook.log"
+RESULT_DIR="~/clawd/data/claude-code-results"
 META_FILE="${RESULT_DIR}/task-meta.json"
-OPENCLAW_BIN="/home/ubuntu/.npm-global/bin/openclaw"
+OPENCLAW_BIN="~/.nvm/versions/node/v24.14.0/bin/openclaw"
 
 mkdir -p "$RESULT_DIR"
 
