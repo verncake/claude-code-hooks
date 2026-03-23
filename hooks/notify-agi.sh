@@ -8,7 +8,7 @@ set -uo pipefail
 LOG="$HOME/clawd/data/claude-code-results/hook.log"
 RESULT_DIR="$HOME/clawd/data/claude-code-results"
 META_FILE="${RESULT_DIR}/task-meta.json"
-OPENCLAW_BIN="$HOME/.nvm/versions/node/v24.14.0/bin/openclaw"
+OPENCLAW_BIN="$(command -v openclaw 2>/dev/null || echo "$HOME/.nvm/versions/node/v24.14.0/bin/openclaw")"
 
 mkdir -p "$RESULT_DIR"
 
