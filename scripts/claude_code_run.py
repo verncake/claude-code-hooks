@@ -50,7 +50,7 @@ def looks_like_slash_commands(prompt: str | None) -> bool:
 
 
 def build_headless_cmd(args: argparse.Namespace) -> list[str]:
-    cmd: list[str] = [args.claude_bin]
+    cmd: list[str] = [args.claude_bin, "--bare"]
 
     if args.permission_mode:
         cmd += ["--permission-mode", args.permission_mode]

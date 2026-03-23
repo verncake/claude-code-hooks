@@ -1,12 +1,11 @@
 {
-  "model": "claude-opus-4-5-20251101",
   "hooks": {
     "Stop": [
       {
         "hooks": [
           {
             "type": "command",
-            "command": "~/.claude/hooks/notify-agi.sh >> /tmp/notify-agi.log 2>&1",
+            "command": "~/.claude/hooks/notify-agi.sh >> /tmp/notify-agi.log 2>&1 &",
             "timeout": 10
           }
         ]
@@ -17,7 +16,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "~/.claude/hooks/notify-agi.sh >> /tmp/notify-agi.log 2>&1",
+            "command": "~/.claude/hooks/notify-agi.sh >> /tmp/notify-agi.log 2>&1 &",
             "timeout": 10
           }
         ]

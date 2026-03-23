@@ -109,6 +109,13 @@ fi
 export OPENCLAW_GATEWAY_TOKEN="${OPENCLAW_GATEWAY_TOKEN:-477d47934e5f6b02bfb823ba681bb743eae55479b7d260e8}"
 export OPENCLAW_GATEWAY="${OPENCLAW_GATEWAY:-http://127.0.0.1:18789}"
 
+# Minimax API credentials for Claude Code headless auth
+CLAUDE_SETTINGS="${HOME}/.claude/settings.json"
+if [ -f "$CLAUDE_SETTINGS" ]; then
+    export ANTHROPIC_AUTH_TOKEN="$(jq -r '.env.ANTHROPIC_AUTH_TOKEN // empty' "$CLAUDE_SETTINGS" 2>/dev/null || true)"
+    export ANTHROPIC_BASE_URL="$(jq -r '.env.ANTHROPIC_BASE_URL // empty' "$CLAUDE_SETTINGS" 2>/dev/null || true)"
+fi
+
 if [ -n "$MODEL" ]; then
     export ANTHROPIC_MODEL="$MODEL"
 fi
